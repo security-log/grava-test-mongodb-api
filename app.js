@@ -5,8 +5,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const routes = require('./lib/routes');
 const expressWinston = require('express-winston');
-const app = express();
 const cors = require('cors');
+const app = express();
 
 function connectMongoose() {
     const mongoose = require('mongoose');
