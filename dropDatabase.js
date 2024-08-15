@@ -15,12 +15,12 @@ async function dropDatabase() {
 
         // Borra la base de datos
         await mongoose.connection.dropDatabase();
-        console.log('Base de datos borrada exitosamente');
+        console.log('Database successfully dropped');
 
         // Cierra la conexión
         await mongoose.disconnect();
     } catch (error) {
-        console.error('Error al borrar la base de datos:', error);
+        console.error('Error dropping the database:', error);
     }
 }
 
