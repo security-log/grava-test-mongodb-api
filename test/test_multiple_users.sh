@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# URL del endpoint
 URL="http://localhost:3000/api/users"
 
-# Array de datos de usuarios
 USERS=(
   '{"name": "John", "lastName": "Doe", "dni": "143996799", "age": 27, "color": "red", "email": "john.doe@gmail.com", "enabled": true}'
   '{"name": "Jane", "lastName": "Smith", "dni": "143996800", "age": 30, "color": "blue", "email": "jane.smith@gmail.com", "enabled": true}'
@@ -17,7 +15,6 @@ USERS=(
   '{"name": "Valid", "lastName": "User", "dni": "143996808", "age": 30, "color": "blue", "email": "valid.user@gmail.com", "enabled": false}' # Valid user
 )
 
-# Enviar solicitudes POST para cada usuario
 for USER in "${USERS[@]}"; do
   echo "Enviando datos: $USER"
   curl -X POST $URL \
